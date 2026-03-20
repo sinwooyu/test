@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Banner CMS</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="app-container">
+      <!-- Top Header -->
+      <div class="top-header">
+        <div class="header-left">
+          <button class="back-btn">←</button>
+          <h1 class="page-title">봄 세일 프로모션</h1>
+        </div>
+        <div class="header-right">
+          <button id="exportBtn" class="btn btn-export">Export</button>
+          <button id="saveBtn" class="btn btn-save">저장</button>
+        </div>
+      </div>
+
+      <!-- Main Content Area -->
+      <div class="main-wrapper">
+        <!-- Left Panel -->
+        <div class="left-panel">
+          <!-- Tabs -->
+          <div class="tabs">
+            <button class="tab active" data-tab="content">콘텐츠</button>
+            <button class="tab" data-tab="style">스타일</button>
+            <button class="tab" data-tab="size">사이즈</button>
+          </div>
+
+          <!-- Content Tab -->
+          <div class="tab-content active" id="content-tab">
+            <!-- 헤드라인 -->
+            <div class="form-group">
+              <label for="headline">헤드라인</label>
+              <input
+                type="text"
+                id="headline"
+                placeholder="헤드라인 입력"
+              />
+            </div>
+
+            <!-- 서브 텍스트 -->
+            <div class="form-group">
+              <label for="subtext">서브 텍스트</label>
+              <textarea
+                id="subtext"
+                rows="3"
+                placeholder="서브 텍스트 입력"
+              ></textarea>
+            </div>
+
+            <!-- CTA 버튼 텍스트 -->
+            <div class="form-group">
+              <label for="ctaText">CTA 버튼 텍스트</label>
+              <input
+                type="text"
+                id="ctaText"
+                placeholder="CTA 텍스트 입력"
+              />
+            </div>
+
+            <!-- CTA 링크 URL -->
+            <div class="form-group">
+              <label for="ctaUrl">CTA 링크 URL</label>
+              <input
+                type="text"
+                id="ctaUrl"
+                placeholder="https://example.com"
+              />
+            </div>
+
+            <!-- 배경 이미지 -->
+            <div class="form-group">
+              <label for="bgImage">배경 이미지</label>
+              <div class="image-input-group">
+                <input
+                  type="text"
+                  id="bgImageUrl"
+                  placeholder="이미지 URL"
+                />
+                <button class="upload-icon-btn">
+                  <input type="file" id="bgUpload" accept="image/*" hidden />
+                  <label for="bgUpload" style="cursor: pointer; margin: 0;">📤</label>
+                </button>
+              </div>
+              <div class="preset-backgrounds">
+                <div class="preset-bg" data-bg="bg1"></div>
+                <div class="preset-bg" data-bg="bg2"></div>
+                <div class="preset-bg" data-bg="bg3"></div>
+                <div class="preset-bg" data-bg="bg4"></div>
+                <div class="preset-bg" data-bg="bg5"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Style Tab -->
+          <div class="tab-content" id="style-tab">
+            <p style="color: #999; padding: 20px;">스타일 설정 (준비중)</p>
+          </div>
+
+          <!-- Size Tab -->
+          <div class="tab-content" id="size-tab">
+            <p style="color: #999; padding: 20px;">사이즈 설정 (준비중)</p>
+          </div>
+        </div>
+
+        <!-- Right Panel (Preview) -->
+        <div class="right-panel">
+          <div class="preview-area">
+            <canvas id="bannerCanvas" width="740" height="232"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>

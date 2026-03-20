@@ -1,0 +1,15 @@
+<svg width="740" height="232" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="orangeGrad" cx="70%" cy="30%">
+      <stop offset="0%" style="stop-color:#ff8844;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#dd6622;stop-opacity:1" />
+    </radialGradient>
+    <pattern id="dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="white" opacity="0.3"/>
+    </pattern>
+  </defs>
+  <rect width="740" height="232" fill="url(#orangeGrad)"/>
+  <rect width="740" height="232" fill="url(#dots)"/>
+  <path d="M 0 180 Q 200 150 400 160 T 740 140 L 740 232 L 0 232 Z" fill="#cc5511" opacity="0.3"/>
+  <path d="M 400 160 Q 550 150 740 180 L 740 232 L 400 232 Z" fill="#aa4400" opacity="0.2"/>
+</svg>
